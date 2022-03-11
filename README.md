@@ -20,7 +20,7 @@ Born2beroot checkmark is a note how to setup VM with knowledge resource. This ca
 
 1. open google spreadsheet link 
 https://docs.google.com/spreadsheets/d/1o_YzwE3fOP6ivc68Ipey1HwCWo0oaG5ZFlyEkMFQwRs/edit#gid=1386834576
-2. Duplicate tab into new sheet as yours.
+2. Duplicate `todo` sheet into new your sheet.
 3. Follow the subject and check them step by step.
 4. Look up resource and remark.
 5. You can a hint at below sheet in link.
@@ -30,6 +30,7 @@ https://docs.google.com/spreadsheets/d/1o_YzwE3fOP6ivc68Ipey1HwCWo0oaG5ZFlyEkMFQ
 - nnakarac
 - pleelerd
 - spoolpra
+- tsomsa
 
 ## License
 
