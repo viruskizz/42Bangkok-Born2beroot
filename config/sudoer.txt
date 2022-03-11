@@ -1,0 +1,16 @@
+#sudoer
+## Own Configuration
+##
+#basic security
+Defaults        requiretty
+Defaults        secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Defaults        passwd_tries = 3
+Defaults        badpass_message = "HEY!!!...Wrong password, please try again..."
+#Defaults        insults
+#add sudo group (optiopnal for CentOS default is wheel)
+%sudo  ALL=(ALL)       ALL
+
+#log config
+Defaults        lecture = always
+Defaults        logfile = "/var/log/sudo.log"
+Defaults        log_input,log_output, iolog_dir = "/var/log/sudo"
