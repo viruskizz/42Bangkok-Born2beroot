@@ -90,25 +90,25 @@ Just Check only **_Mount point, Group name, file type, encrpyting level_**. No n
 Ping test
 
 ```bash
-ping google.com
+$ ping google.com
 ```
 
 Check network interface
 
 ```bash
-nmcli d
+$ nmcli d
 ```
 
 Active connection and set automatic on start
 
 ```bash
-nmtui
+$ nmtui
 ```
 
 Reboot required
 
 ```bash
-reboot
+$ reboot
 ```
 
 ### Install Utility package
@@ -136,29 +136,31 @@ I recommend setup firewall and ssh first because you can use Gitbash instead of 
 Stop and Disable firewalld (default firewall in CentOS)
 
 ```bash
-systemctl status firewalld
-systemctl disable firewalld
+# check firewalld status
+$ systemctl status firewalld
+# disable firewalld on start vm
+$ systemctl disable firewalld
 ```
 
 Install UFW and enable
 
 ```bash
-yum install -y ufw
-systemctl enable ufw
-systemctl start ufw
+$ yum install -y ufw
+$ systemctl enable ufw
+$ systemctl start ufw
 ```
 
 Delete not used port by number
 
 ```bash
-ufw status numbered
-ufw delete <number>
+$ ufw status numbered
+$ ufw delete <number>
 ```
 
 Allow your port 4242
 
 ```bash
-ufw allow 4242
+$ ufw allow 4242
 ```
 
 ## Setup SSH
@@ -174,31 +176,31 @@ Allow you to access VM from external
 Add custom port 4242 in `/etc/ssh/sshd_config`
 
 ```bash
-echo "Port 4242" >> /etc/ssh/sshd_config
+$ echo "Port 4242" >> /etc/ssh/sshd_config
 ```
 
 Add custom port 4242 in SELinux
 
 ```bash
-semanage port -a -t ssh_port_t -p tcp 4242
+$ semanage port -a -t ssh_port_t -p tcp 4242
 ```
 
 disable root login
 
 ```bash
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+$ echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 ```
 
 restart service
 
 ```bash
-systemctl restart sshd
+$ systemctl restart sshd
 ```
 
 Reboot is required
 
 ```bash
-reboot
+$ reboot
 ```
 
 ## Setup User management
@@ -227,31 +229,31 @@ $ cat /etc/group | grep $GROUP
 If not existed , create new group name `user42`
 
 ```bash
-groupadd <group name>
+$ groupadd <group name>
 ```
 
 Check user
 
 ```bash
-id <username>
+$ id <username>
 ```
 
 if not existed , create user as login42 username with password
 
 ```bash
-adduser <username> -p <password>
+$ adduser <username> -p <password>
 ```
 
 Assign user to group `user42` and `wheel`  (wheel is sudo group in CentOS)
 
 ```bash
-usermod -a -G <group> <username>
+$ usermod -a -G <group> <username>
 ```
 
 $ Check group that user belong to.
 
 ```bash
-group <username>
+$ group <username>
 ```
 
 ## User SSH Access
@@ -273,7 +275,7 @@ $ ssh login42@1
 Test you are in same machine with broadcast message
 
 ```bash
-Wall message
+$ wall message
 ```
 
 <div align="left">
@@ -287,12 +289,12 @@ Wall message
 Open login defitions `/etc/loigin.defs`
 
 ```bash
-vi /etc/loigin.defs
+$ vi /etc/loigin.defs
 ```
 
 Edit Parameters like below
 
-```bash
+```txt
 PASS_MAX_DAYS   30
 PASS_MIN_DAYS   2
 PASS_MIN_LEN    10
@@ -304,13 +306,13 @@ PASS_WARN_AGE   7
 backup original file (optional)
 
 ```bash
-cp /etc/pam.d/system-auth /etc/pam.d/system-auth.bak
+$ cp /etc/pam.d/system-auth /etc/pam.d/system-auth.bak
 ```
 
 Edit config file `/etc/pam.d/system-auth`
 
 ```bash
-vi /etc/pam.d/system-auth
+$ vi /etc/pam.d/system-auth
 ```
 
 Change parameters`pam_pwquality.so` in file like this
@@ -325,7 +327,7 @@ password    requisite     pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=
 - [wheel group is default for sudo group in CentOS]
 
 ```bash
-visodu
+$ visodu
 ```
 
 Edit config file like this below
@@ -336,23 +338,23 @@ Edit config file like this below
 
 ## Set Sudoer by visudo command
 #basic security
-#Defaults        requiretty
-#Defaults        secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-#Defaults        passwd_tries = 3
-#Defaults        badpass_message = "HEY!!!...Wrong password, please try again..."
-#Defaults        insults
+Defaults        requiretty
+Defaults        secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Defaults        passwd_tries = 3
+Defaults        badpass_message = "HEY!!!...Wrong password, please try again..."
+Defaults        insults
 
 #log config
-#Defaults        lecture = always
-#Defaults        logfile = "/var/log/sudo.log"
-#Defaults        log_input,log_output, iolog_dir = "/var/log/sudo"
+Defaults        lecture = always
+Defaults        logfile = "/var/log/sudo.log"
+Defaults        log_input,log_output, iolog_dir = "/var/log/sudo"
 ```
 
 check sudo log as normal user
 
 ```shell
-su - <user>
-sudo <command>
+$ su - <user>
+$ sudo <command>
 ```
 
 ## Create crontab script
@@ -374,7 +376,7 @@ write a shell script will grep information from your VM
 - [Wall command]
 
 ```shell
-vim monitor.sh
+$ vi monitor.sh
 ```
 
 add script file below
@@ -401,25 +403,25 @@ echo "$output"
 grant permission to file
 
 ```shell
-chmod +x monitor.sh
+$ chmod +x monitor.sh
 ```
 
 execute file to test
 
 ```shell
-./monitor.sh
+$ ./monitor.sh
 ```
 
 Try broadcast message with script
 
 ```shell
-~/monitor.sh | wall
+$ ~/monitor.sh | wall
 ```
 
 Add crontab job every 10 mins
 
 ```shell
-crontab -e
+$ crontab -e
 ```
 
 add line below
