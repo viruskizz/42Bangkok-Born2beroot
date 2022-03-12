@@ -79,10 +79,25 @@ Click `Done`  and Create a passphrase for encrypted disk
     <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/Installation/CentOs-Setup-Partition.png" alt="Logo" height="240">
   </a>
 </div>
-5.  Click `Install`
-6. Create your root password
 
-  
+5. Click `Install`
+6. Create your root password
+7. Reboot
+
+Check your partition is succeed with command.
+```
+lsblk
+````
+
+<div align="left">
+  <a href="https://github.com/viruskizz/42bangkok-piscinec-scripts">
+    <img src="CentOs-lsblk.png" alt="Logo" height="240">
+  </a>
+</div>
+
+Just Check only **_Mount point, Group name, file type, encrpyting level_**. No need to check number of ordering it will managed by OS. CentOS ordering is different from Debian.
+
+
 
 ## License
 
