@@ -77,10 +77,11 @@ sed -i 's/^PASS_MIN_LEN.*/PASS_MIN_LEN\t10/' /etc/login.defs
 sed -i 's/^PASS_WARN_AGE.*/PASS_WARN_AGE\t7/' /etc/login.defs
 # Set password policy
 cp /etc/pam.d/system-auth /etc/pam.d/system-auth.bak
-visodu
+vi /etc/pam.d/system-auth
 # change pam_pwquality.so like this
 #password    requisite     pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 difok=7 reject_username enforce_for_root
 
+visodu
 ## Set Sudoer by visudo command
 #basic security
 #Defaults        requiretty
