@@ -26,6 +26,11 @@ https://docs.google.com/spreadsheets/d/1o_YzwE3fOP6ivc68Ipey1HwCWo0oaG5ZFlyEkMFQ
 5. You can a hint at below sheet in link.
 
 
+## Installation Step
+> WARNING THIS IS SPOIL
+
+you can check intalltion step in [installation](https://github.com/viruskizz/42Bangkok-Born2beroot/tree/main/Installation) in this repo
+
 ## Credit
 - nnakarac
 - pleelerd
