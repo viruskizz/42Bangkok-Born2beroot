@@ -216,7 +216,7 @@ Wall message
 ```
 
 <div align="left">
-    <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/Installation/CentOs-ssh-testing.png" alt="Logo" height="240">
+    <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/Installation/CentOs-access-ssh.png" alt="Logo" height="240">
 </div>
 
 **Good Luck, โชคดีครับ**
