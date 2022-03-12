@@ -210,6 +210,14 @@ Access your VM with Gitbash via SSH from your computer not in VM
 # ssh <username>@<ip> -p <port>
 ssh login42@1
 ```
+Test you are in same machine with broadcast message
+```
+Wall message
+```
+
+<div align="left">
+    <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/Installation/CentOs-ssh-testing.png" alt="Logo" height="240">
+</div>
 
 **Good Luck, โชคดีครับ**
 
