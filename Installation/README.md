@@ -430,6 +430,12 @@ add line below
 
 ## Finish Mandatory
 
+congratulations your ROOT now
+
+<div align="left">
+    <img src="https://c.tenor.com/nTWaxH_L3bEAAAAC/loki-success.gif" alt="Logo" height="240">
+</div>
+
 by Araiva
 **Good Luck, โชคดีครับ**
 
