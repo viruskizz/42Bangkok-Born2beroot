@@ -205,7 +205,7 @@ reboot
 
 Manage your user groups and password
 
-### Resource
+### Resources
 
 - [Linux group & user]
 - [Login deps]
@@ -321,7 +321,8 @@ password    requisite     pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=
 
 ## Implemet Sudo rule
 
-Edit sudo rule
+- [Useful sudoer configuration]
+- [wheel group is default for sudo group in CentOS]
 
 ```bash
 visodu
@@ -357,6 +358,20 @@ sudo <command>
 ## Create crontab script
 
 write a shell script will grep information from your VM
+
+### Resources
+
+- [How to Cronjob]
+- [How to monitor resource]
+- [Get cpu usage]
+- [List sudo history]
+- [Check TCP ESTABLISHED]
+- [Check LVM is used]
+- [Check last boot]
+- [Check disk usage]
+- [Memory Usage]
+- [Check CPU command]
+- [Wall command]
 
 ```shell
 vim monitor.sh
@@ -447,3 +462,18 @@ by Araiva
 [Check password age]: https://www.cyberciti.biz/faq/linux-howto-check-user-password-expiration-date-and-time/
 [getent command]: https://linuxhint.com/getent-command/
 [Could not chdir to home directory]: https://www.cyberciti.biz/faq/linux-unix-appleosx-bsd-could-not-chdir-to-home-directory/
+
+[Useful sudoer configuration]: https://www.tecmint.com/sudoers-configurations-for-setting-sudo-in-linux/
+[wheel group is default for sudo group in CentOS]: https://en.wikipedia.org/wiki/Wheel_(computing)#:~:text=The%20wheel%20group%20is%20a,that%20of%20a%20wheel%20group.
+
+[How to Cronjob]: https://phoenixnap.com/kb/set-up-cron-job-linux
+[How to monitor resource]: https://linuxhint.com/check-cpu-utilization-linux/
+[Get cpu usage]: https://www.baeldung.com/linux/get-cpu-usage
+[List sudo history]: https://unix.stackexchange.com/questions/167935/details-about-sudo-commands-executed-by-all-user
+[Check TCP ESTABLISHED]: https://serverfault.com/questions/527875/how-do-i-get-the-number-of-currently-established-tcp-connections-for-a-specifi
+[Check LVM is used]: https://askubuntu.com/questions/202613/how-do-i-check-whether-i-am-using-lvm
+[Check last boot]: https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html
+[Check disk usage]: https://phoenixnap.com/kb/linux-check-disk-space
+[Memory Usage]: https://phoenixnap.com/kb/linux-commands-check-memory-usage
+[Check CPU command]: https://www.cyberciti.biz/faq/check-how-many-cpus-are-there-in-linux-system/
+[Wall command]: https://linuxize.com/post/wall-command-in-linux/
