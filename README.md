@@ -29,7 +29,7 @@ https://docs.google.com/spreadsheets/d/1o_YzwE3fOP6ivc68Ipey1HwCWo0oaG5ZFlyEkMFQ
 ## Installation Step
 > WARNING THIS IS SPOIL
 
-you can check intalltion step in [installation](https://github.com/viruskizz/42Bangkok-Born2beroot/tree/main/Installation) in this repo
+you can check intallation step in [installation](https://github.com/viruskizz/42Bangkok-Born2beroot/tree/main/Installation) in this repo
 
 ## Credit
 - nnakarac
