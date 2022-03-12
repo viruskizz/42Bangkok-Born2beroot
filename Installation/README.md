@@ -72,10 +72,11 @@ Create new group name `LVMGroup` and `Encrypt`
 | srv	| /srv	| 3GiB | LVMGroup | xfs |
 | tmp	| /tmp	| 3GiB | LVMGroup | xfs |
 |var-log| /var/log| 4GiB | LVMGroup | xfs |
+
 Click `Done`  and Create a passphrase for encrypted disk
 <div align="left">
   <a href="https://github.com/viruskizz/42bangkok-piscinec-scripts">
-    <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/cover.png" alt="Logo" height="240">
+    <img src="https://raw.githubusercontent.com/viruskizz/42Bangkok-Born2beroot/main/Installation/CentOs-Setup-Partition.png" alt="Logo" height="240">
   </a>
 </div>
 5.  Click `Install`
